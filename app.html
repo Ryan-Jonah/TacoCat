@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding project by Ryan Jonah</title>
+    <title>TacoCat: A coding project by Ryan Jonah</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,14 +28,13 @@
     <!-- NAV Section -->
     <nav class="navbar navbar-expand-md fixed-top navbar-dark">
         <div class="container-fluid">
-            <img src="/img/RyanJ_Icon.svg" width="50" alt="Logo" class="d-inline me-2 ms-3">
-            <span class="fw-bold ms-2 fs-2 brand-title">App Name</span>
+            <img src="/img/TacoCat_Title.svg" width="200" alt="Logo" class="d-inline me-2 ms-3">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto ms-3 mt-2 mb-2 mb-md-0">
+                <ul class="navbar-nav me-auto mt-2 mb-2 mb-md-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
@@ -57,9 +56,46 @@
     </nav>
 
     <!-- MAIN Section  -->
-    <main class="flex-shrink-0">
-      
-    </main>
+   <!-- MAIN Section  -->
+   <main class="flex-shrink-0 mt-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <h1 class="display-5 fw-bold lh-1 mb-3">TacoCat</h1>
+                <h4 class="lead">
+                    TacoCat is a palindrome. A Palindrome is a word, phrase, or sequence that reads the same backward as forward. Write a program the checks if the phrase entered is a Palindrome. <strong class="fw-bold">reverse</strong>.
+                </h4>
+
+            </div>
+            <div class="col">
+                <h5 class="bottom-border">
+                    Enter a phrase or word to check
+                </h5>
+                <div class="row gx-3 gy-2">
+                    <div class="col">
+                        <input type="text" id="userString" class="form-control input-green" placeholder="Enter a string" aria-label="Enter a string">
+                    </div>
+                    <div class="col col-12">
+                        <button type="button" id="btnSubmit" class="button button-green">Check it!</button>
+                        <div id="results">
+
+                        </div>
+                        <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
+                            <h4 class="alert-heading">
+                                Well Done!
+                            </h4>
+                            <hr>
+                            <p class="mb-0" id="message">
+                                <!-- Insert message here -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
 
     <!-- FOOTER Section -->
     <footer class="footer mt-auto">
@@ -103,6 +139,9 @@
 
     <!-- External JS -->
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById('btnSubmit').addEventListener('click', getValue)
+    </script>
 </body>
 
 </html>
